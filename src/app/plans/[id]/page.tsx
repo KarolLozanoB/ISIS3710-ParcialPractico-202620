@@ -168,9 +168,25 @@ export default function PlanDetailPage() {
             </button>
 
             <p className="text-sm text-slate-500 text-center mt-6">
-              Cancelación gratuita hasta 24 horas antes del inicio.
+              Cancelación  hasta 24 horas antes del inicio.
             </p>
           </div>
+
+          {/* Card tomada de https://v1.tailwindcss.com/components/cards */}
+          <div className="max-w-sm rounded overflow-hidden shadow-lg">
+         
+          <div className="px-6 py-4">
+            <p className="font-semibold text-slate-900"><span aria-hidden="true"></span> Equipamento</p>
+            <li className="text-sm text-slate-600 mt-2">Chaleco salvavidas</li>
+            <li className="text-sm text-slate-600 mt-2">Ropa de cambio</li>
+            <li className="text-sm text-slate-600 mt-2">Bloqueador solar</li>
+            <li className="text-sm text-slate-600 mt-2">Bolsa impermeable</li>
+
+          </div>
+        </div>    
+
+
+
 
           {/* Experiencia segura */}
           <div className="bg-blue-50 rounded-2xl p-6 mt-8">
@@ -178,7 +194,9 @@ export default function PlanDetailPage() {
             <p className="text-sm text-slate-600 mt-2">
               Seguro de accidentes incluido para todos los participantes registrados.
             </p>
-          </div>
+          </div>          
+
+
         </div>
       </div>
     </div>

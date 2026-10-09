@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getSession } from "@/services/session";
 import { createPlan } from "@/services/plans";
+import Equipamento from "./equipamento";
+
 
 export default function NewPlanPage() {
   const router = useRouter();
@@ -66,8 +68,12 @@ export default function NewPlanPage() {
             <label htmlFor="image" className="font-semibold text-slate-900">
               Foto de portada del plan
             </label>
-            <p className="text-xs text-slate-500">Copia el enlace de una imagen</p>
           </div>
+         
+          <p className="text-sm text-slate-500 mt-3">
+            Copia el enlace de una imagen
+          </p>
+
           <div aria-hidden="true" className="flex flex-col items-center border-2 border-dashed border-slate-300 rounded-2xl p-10 mt-3">
             <span className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full">
               <svg
@@ -116,6 +122,12 @@ export default function NewPlanPage() {
           <label className="block font-semibold text-slate-900 mt-8">
             Dirección <span className="text-orange-700">*</span>
           </label>
+
+        <p className="text-sm text-slate-500 mt-3">
+            Escribe la dirección exacta del lugar donde se realizará el plan. Esto ayudará a los asistentes a ubicarlo fácilmente.
+          </p>
+
+
           <input
             id="address"
             type="text"
@@ -178,7 +190,7 @@ export default function NewPlanPage() {
           <label htmlFor="recomendations" className="block font-semibold text-slate-900 mt-8">
             Recomendaciones para los asistentes <span className="text-orange-700">*</span>
           </label>
-          <p className="text-sm text-slate-300 mt-1">
+          <p className="text-sm text-slate-500 mt-3">
             Agrega tips clave como vestimenta recomendada, qué llevar o recordatorios puntuales.
           </p>
           <input
@@ -190,6 +202,16 @@ export default function NewPlanPage() {
             placeholder="Ej. Llevar protector solar, toalla y agua"
             className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder:text-slate-500 mt-3 outline-none"
           />
+
+
+          {/* Equipamento */}
+          <label htmlFor="recomendations" className="block font-semibold text-slate-900 mt-8">
+            Equipamento <span className="text-orange-700">*</span>
+          </label>
+          <p className="text-sm text-slate-500 mt-3">
+            Agrega lo que los asistentes deben llevar o lo que se les va a prestar.
+          </p>
+          <Equipamento />
 
           {error && <p className="text-sm text-red-600 mt-6">{error}</p>}
 
